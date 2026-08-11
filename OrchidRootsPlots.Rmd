@@ -10,8 +10,8 @@ output: html_document
 library(tidyverse)
 library(ggplot2)
 
-hybrids <- read.csv("C:/Users/a2b32/Desktop/Code/bioinf/orchidroots_cattleya_hybrids.csv")
-species <- read.csv("C:/Users/a2b32/Desktop/Code/bioinf/orchidroots_cattleya_species.csv")
+hybrids <- read.csv("data/orchidroots_cattleya_hybrids.csv")
+species <- read.csv("data/orchidroots_cattleya_species.csv")
 
 summary(hybrids)
 summary(species)
@@ -206,7 +206,7 @@ nrow(unmatched)
 library(ape)
 
 # Load tree from file
-tree_lowestrank <- read.tree("C:/Users/a2b32/Downloads/cattleyatre.nwk")
+tree_lowestrank <- read.tree("data/cattleya_subgeneric.nwk")
 
 # Step 1: Clean species names (no spaces, safe as tip labels)
 species_filtered$SpeciesName <- gsub(" ", "_", species_filtered$Binomial)
